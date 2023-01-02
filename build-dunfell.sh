@@ -30,7 +30,9 @@ echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/
 echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/meta-openembedded/meta-python\" >> conf/bblayers.conf || exit $?
 
 # local.conf
-echo "MACHINE ?= 'raspberrypi2'" >> conf/local.conf || exit $?
+echo "MACHINE = 'raspberrypi2'" >> conf/local.conf || exit $?
+echo "RPI_USE_U_BOOT = \"1\"" >> conf/local.conf || exit $?
+echo "ENABLE_UART = \"1\"" >> conf/local.conf || exit $?
 echo "BB_NUMBER_THREADS = \"11\"" >> conf/local.conf || exit $?
 echo "PARALLEL_MAKE = \"-j 11 \"" >> conf/local.conf || exit $?
 popd 
