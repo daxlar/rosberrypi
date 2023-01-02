@@ -1,3 +1,6 @@
+#!/bin/bash
+set -x
+
 BUILD = "build-image"
 SOURCES = "sources"
 BUILD_DIR = "build_dir"
