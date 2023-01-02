@@ -23,14 +23,12 @@ source ${SOURCES}/poky/oe-init-build-env ${BUILD_DIR}
 
 # setup bblayers.conf and local.conf within the build/build_dir/conf directory
 # bblayers.conf 
-echo BBLAYERS += \"\${BSPDIR}/sources/meta-raspberrypi\" >> conf/bblayers.conf || exit $?
-echo BBLAYERS += \"\${BSPDIR}/sources/meta-openembedded/meta-oe\" >> conf/bblayers.conf || exit $?
-echo BBLAYERS += \"\${BSPDIR}/sources/meta-openembedded/meta-multimedia\" >> conf/bblayers.conf || exit $?
-echo BBLAYERS += \"\${BSPDIR}/sources/meta-openembedded/meta-networking\" >> conf/bblayers.conf || exit $?
-echo BBLAYERS += \"\${BSPDIR}/sources/meta-openembedded/meta-python\" >> conf/bblayers.conf || exit $?
-echo BBLAYERS += \"\${BSPDIR}/sources/poky/meta\" >> conf/bblayers.conf || exit $?
-echo BBLAYERS += \"\${BSPDIR}/sources/poky/meta-poky\" >> conf/bblayers.conf || exit $?
-echo BBLAYERS += \"\${BSPDIR}/sources/poky/meta-yocto-bsp\" >> conf/bblayers.conf || exit $?
+echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/meta-raspberrypi\" >> conf/bblayers.conf || exit $?
+echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/meta-openembedded/meta-oe\" >> conf/bblayers.conf || exit $?
+echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/meta-openembedded/meta-multimedia\" >> conf/bblayers.conf || exit $?
+echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/meta-openembedded/meta-networking\" >> conf/bblayers.conf || exit $?
+echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/meta-openembedded/meta-python\" >> conf/bblayers.conf || exit $?
+
 # local.conf
 echo "MACHINE ?= 'raspberrypi2'" >> conf/local.conf || exit $?
 echo "BB_NUMBER_THREADS = \"11\"" >> conf/local.conf || exit $?
