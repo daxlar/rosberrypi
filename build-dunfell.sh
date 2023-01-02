@@ -1,10 +1,10 @@
 #!/bin/bash
 set -x
 
-BUILD = "build-image"
-SOURCES = "sources"
-BUILD_DIR = "build_dir"
-YOCTO_DISTRO = "dunfell"
+BUILD="build-image"
+SOURCES="sources"
+BUILD_DIR="build_dir"
+YOCTO_DISTRO="dunfell"
 
 mkdir ${BUILD}
 pushd ${BUILD}
