@@ -41,5 +41,5 @@ echo "BB_NUMBER_THREADS = \"11\"" >> conf/local.conf || exit $?
 echo "PARALLEL_MAKE = \"-j 11 \"" >> conf/local.conf || exit $?
 popd 
 
-bitbake core-image-base
+bitbake ros-image-core
 
