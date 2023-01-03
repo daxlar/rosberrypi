@@ -30,8 +30,8 @@ echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/
 echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/meta-ros/meta-ros-common\" >> conf/bblayers.conf || exit $?
 echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/meta-ros/meta-ros2\" >> conf/bblayers.conf || exit $?
 echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/meta-ros/meta-ros2-foxy\" >> conf/bblayers.conf || exit $?
-echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/meta-ros-backports-gatesgarth\" >> conf/bblayers.conf || exit $?
-echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/meta-ros-backports-hardknott\" >> conf/bblayers.conf || exit $?
+echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/meta-ros/meta-ros-backports-gatesgarth\" >> conf/bblayers.conf || exit $?
+echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/meta-ros/meta-ros-backports-hardknott\" >> conf/bblayers.conf || exit $?
 
 # local.conf
 echo "MACHINE = 'raspberrypi2'" >> conf/local.conf || exit $?
