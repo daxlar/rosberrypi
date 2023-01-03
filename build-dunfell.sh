@@ -15,8 +15,7 @@ pushd ${SOURCES}
 git clone -b ${YOCTO_DISTRO} https://github.com/agherzan/meta-raspberrypi.git
 git clone -b ${YOCTO_DISTRO} https://github.com/yoctoproject/poky.git
 git clone -b ${YOCTO_DISTRO} https://github.com/openembedded/meta-openembedded.git
-#git clone -b ${YOCTO_DISTRO} https://github.com/ros/meta-ros.git
-#git clone -b ${YOCTO_DISTRO} https://github.com/yoctoproject/poky.git
+git clone -b ${YOCTO_DISTRO} https://github.com/ros/meta-ros.git
 popd 
 
 source ${SOURCES}/poky/oe-init-build-env ${BUILD_DIR}
@@ -28,6 +27,9 @@ echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/
 echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/meta-openembedded/meta-multimedia\" >> conf/bblayers.conf || exit $?
 echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/meta-openembedded/meta-networking\" >> conf/bblayers.conf || exit $?
 echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/meta-openembedded/meta-python\" >> conf/bblayers.conf || exit $?
+echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/meta-ros/meta-ros-common\" >> conf/bblayers.conf || exit $?
+echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/meta-ros/meta-ros2\" >> conf/bblayers.conf || exit $?
+echo BBLAYERS += \"/home/build/docker/rosberrypi/rosberrypi/build-image/sources/meta-ros/meta-ros2-foxy\" >> conf/bblayers.conf || exit $?
 
 # local.conf
 echo "MACHINE = 'raspberrypi2'" >> conf/local.conf || exit $?
