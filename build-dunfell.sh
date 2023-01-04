@@ -39,6 +39,7 @@ echo "RPI_USE_U_BOOT = \"1\"" >> conf/local.conf || exit $?
 echo "ENABLE_UART = \"1\"" >> conf/local.conf || exit $?
 echo "BB_NUMBER_THREADS = \"11\"" >> conf/local.conf || exit $?
 echo "PARALLEL_MAKE = \"-j 11 \"" >> conf/local.conf || exit $?
+echo "IMAGE_INSTALL_append_pn-ros-image-core = \" demo-nodes-cpp \"" >> conf/local.conf || exit $?
 popd 
 
 bitbake ros-image-core
